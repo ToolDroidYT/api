@@ -1,0 +1,207 @@
+@import url("../themes/main-theme.css");
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: "Afacad", Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  background-color: var(--background-1000);
+  color: var(--text-950);
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+/**/
+
+.content-holder {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content:nth-child(1) {
+  background: linear-gradient(
+    to top,
+    var(--background-50),
+    var(--background-900)
+  );
+}
+
+.content:not(:nth-child(1)) {
+  background: var(--background-1000);
+}
+
+.content-background {
+  overflow: hidden;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.content-background > img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+.content.main {
+  position: relative;
+}
+
+.content.main > .background {
+  position: absolute;
+  pointer-events: none;
+}
+
+.content.main > .background.bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.content.main > .background.top-right {
+  top: 0;
+  right: 0;
+}
+
+.content.main > .background.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/**/
+
+.header-title {
+  color: var(--text-900);
+  font-size: 10rem;
+  top: 35% !important;
+  background: linear-gradient(to top, var(--text-800), var(--text-950));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  --parallax-speed: 2;
+  animation: parallax-title linear;
+  animation-timeline: scroll();
+}
+
+.background.hill1 {
+  --parallax-speed: 24;
+  animation: parallax-hill1 linear;
+  animation-timeline: scroll();
+}
+
+.background.hill2 {
+  --parallax-speed: 10;
+  animation: parallax-hill2 linear;
+  animation-timeline: scroll();
+}
+
+.background.hill3 {
+  --parallax-speed: 10;
+  animation: parallax-hill3 linear;
+  animation-timeline: scroll();
+}
+
+.background.hill4 {
+  --parallax-speed: 10;
+  animation: parallax-hill4 linear;
+  animation-timeline: scroll();
+}
+
+.background.hill5 {
+  --parallax-speed: 10;
+  animation: parallax-hill5 linear;
+  animation-timeline: scroll();
+}
+
+.background.leaf {
+  --parallax-speed: 24;
+  animation: parallax-leaf linear;
+  animation-timeline: scroll();
+}
+
+.background.tree {
+  --parallax-speed: 24;
+  animation: parallax-tree linear;
+  animation-timeline: scroll();
+}
+
+@keyframes parallax-title {
+  to {
+    background: linear-gradient(to bottom, var(--primary-600), transparent);
+    transform: translate(-50%, calc(var(--parallax-speed) * 200px)) scale(0.96);
+  }
+}
+
+@keyframes parallax-hill1 {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * 30px));
+  }
+}
+
+@keyframes parallax-hill2 {
+  to {
+    transform: translate(
+      calc(var(--parallax-speed) * -25px),
+      calc(var(--parallax-speed) * 3px)
+    );
+  }
+}
+
+@keyframes parallax-hill3 {
+  to {
+    transform: translate(
+      calc(var(--parallax-speed) * 25px),
+      calc(var(--parallax-speed) * 3px)
+    );
+  }
+}
+
+@keyframes parallax-hill4 {
+  to {
+    transform: translateX(calc(var(--parallax-speed) * -50px));
+  }
+}
+
+@keyframes parallax-hill5 {
+  to {
+    transform: translateX(calc(var(--parallax-speed) * 50px));
+  }
+}
+
+@keyframes parallax-leaf {
+  to {
+    transform: translate(
+        calc(var(--parallax-speed) * 75px),
+        calc(var(--parallax-speed) * -10px)
+      )
+      rotate(90deg);
+  }
+}
+
+@keyframes parallax-tree {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * 10px));
+  }
+}

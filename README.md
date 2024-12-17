@@ -36,6 +36,112 @@ public class Main {
 ```
 
 Operators: Arithmetic, Relational, Logical.
+Arithmetic, Relational, and Logical Operators in Java
+
+1. Arithmetic Operators
+
+Arithmetic operators are used to perform basic mathematical operations.
+
+Example Code:
+
+```java
+public class ArithmeticExample {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+
+        System.out.println("Addition: " + (a + b));       // 15
+        System.out.println("Subtraction: " + (a - b));    // 5
+        System.out.println("Multiplication: " + (a * b)); // 50
+        System.out.println("Division: " + (a / b));       // 2
+        System.out.println("Modulus: " + (a % b));        // 0
+    }
+}
+```
+
+---
+
+2. Relational (Comparison) Operators
+
+Relational operators are used to compare two values. The result is always a boolean (true or false).
+
+Example Code:
+
+```java
+public class RelationalExample {
+    public static void main(String[] args) {
+        int x = 10, y = 5;
+
+        System.out.println("Equal to: " + (x == y));       // false
+        System.out.println("Not equal to: " + (x != y));   // true
+        System.out.println("Greater than: " + (x > y));    // true
+        System.out.println("Less than: " + (x < y));       // false
+        System.out.println("Greater than or equal to: " + (x >= y)); // true
+        System.out.println("Less than or equal to: " + (x <= y));    // false
+    }
+}
+```
+
+---
+
+3. Logical Operators
+
+Logical operators are used to combine two or more conditions. The result is always a boolean (true or false).
+
+Truth Table for && (AND): | Condition 1 | Condition 2 | Result | |-------------|-------------|--------| | true      | true      | true | | true      | false     | false| | false     | true      | false| | false     | false     | false|
+
+Truth Table for || (OR): | Condition 1 | Condition 2 | Result | |-------------|-------------|--------| | true      | true      | true | | true      | false     | true | | false     | true      | true | | false     | false     | false|
+
+Example Code:
+
+```java
+public class LogicalExample {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+
+        System.out.println("Logical AND: " + ((a > 5) && (b < 10))); // true
+        System.out.println("Logical OR: " + ((a < 5) || (b < 10)));  // true
+        System.out.println("Logical NOT: " + !(a > 5));              // false
+    }
+}
+```
+
+---
+
+4. Combining Operators
+
+You can combine these operators to create complex conditions.
+
+Example:
+
+```java
+public class CombinedOperatorsExample {
+    public static void main(String[] args) {
+        int x = 10, y = 5, z = 20;
+
+        // Check if x is greater than y AND less than z
+        if ((x > y) && (x < z)) {
+            System.out.println("x is between y and z.");
+        }
+
+        // Check if x is either less than y OR greater than z
+        if ((x < y) || (x > z)) {
+            System.out.println("x is out of the range.");
+        }
+
+        // Negate a condition
+        if (!(x == z)) {
+            System.out.println("x is not equal to z.");
+        }
+    }
+}
+```
+
+Output:
+
+```
+x is between y and z.
+x is not equal to z.
+```
 
 Control Flow:
 Examples: if-else, switch, loops (for, while, do-while).

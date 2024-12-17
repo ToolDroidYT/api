@@ -56,15 +56,18 @@ Examples: if-else, switch, loops (for, while, do-while).
 
 Example: For Loop
 
+```java
 for (int i = 1; i <= 5; i++) {
     System.out.println("Iteration: " + i);
 }
+```
 
 3. Introduction to Object-Oriented Programming (OOP)
 
 Classes and Objects
 Example:
 
+```java
 class Dog {
     String name;
     int age;
@@ -73,6 +76,8 @@ class Dog {
         System.out.println(name + " says Woof!");
     }
 }
+```
+```java
 public class Main {
     public static void main(String[] args) {
         Dog dog = new Dog();
@@ -81,6 +86,7 @@ public class Main {
         dog.bark();
     }
 }
+```
 
 Access Modifiers: public, private, protected.
 
